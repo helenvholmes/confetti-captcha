@@ -1,6 +1,6 @@
 // Function triggered when client clicks [Verify]
 function verifyCaptcha() {
-  alert("Verified!");
+  alert("Looks like you're a robot!");
   closeVerifyWindow();
 }
 
