@@ -163,28 +163,9 @@
   cursor: pointer;
 }
 
-.tile-grid {
-  display: grid;
-  grid-template-columns: 135px 135px;
-  grid-gap: 12px;
-}
-
-.tile-grid img {
-  cursor: pointer;
-}
-
-.selected {
-  opacity: 0.5;
-}
-
-#trial2 {
-  display: none;
-}
-
 .dropzone {
-  background-color: blue;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
 }
 
 .dropzone img {
@@ -194,6 +175,7 @@
 .wrapper {
   position: relative;
   min-height: 200px;
+  margin-bottom: 20px;
   width: 300px;
 }
 
@@ -212,3 +194,7 @@
 .blue {
   background-color: #5fc9f5;
 }
+
+/* Grey Hex: #424242
+Orange Hex: #f79420
+Font: Lato */

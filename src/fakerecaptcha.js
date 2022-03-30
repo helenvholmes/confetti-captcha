@@ -4,7 +4,6 @@ function verifyCaptcha() {
   closeVerifyWindow();
 }
 
-// $(".confetti").draggable();
 $(".dropzone").droppable({
   drop: function (event, ui) {
     // success
@@ -43,7 +42,7 @@ function create(i) {
     .css({
       width: width + "px",
       height: height + "px",
-      top: -Math.random() * 50 + "%",
+      top: -Math.random() * 200 + "%",
       left: Math.random() * 80 + "%",
       opacity: Math.random() + 0.5,
       transform: "rotate(" + Math.random() * 360 + "deg)",
@@ -52,6 +51,10 @@ function create(i) {
 
   drop(i);
 }
+
+$(".red").draggable({ cursor: "grabbing" });
+$(".blue").draggable({ cursor: "grabbing" });
+$(".yellow").draggable({ cursor: "grabbing" });
 
 function drop(x) {
   $(".confetti-" + x).animate(
