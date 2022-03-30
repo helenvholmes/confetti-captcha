@@ -66,6 +66,11 @@ function drop(x) {
   );
 }
 
+$("#robot").click(function (e) {
+  e.preventDefault();
+  verifyCaptcha();
+});
+
 let checkboxWindow = document.getElementById("fkrc-checkbox-window");
 let checkboxBtn = document.getElementById("fkrc-checkbox");
 let checkboxBtnSpinner = document.getElementById("fkrc-spinner");
