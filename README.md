@@ -6,7 +6,7 @@
 
 https://scooooooooby.github.io/confetti-captcha/
 
-<img src="https://raw.githubusercontent.com/m-brz/fake-captcha/main/gif-demo.gif" alt="Fake captcha demo">
+<img src="https://raw.githubusercontent.com/m-brz/fake-captcha/main/gif-demo.gif" alt="Confetti captcha demo">
 
 ## Installation/Usage
 

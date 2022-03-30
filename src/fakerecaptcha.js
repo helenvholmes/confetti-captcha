@@ -101,7 +101,7 @@ function runClickedCheckboxEffects() {
   }, 900);
 
   setTimeout(function () {
-    $("#give-up").show();
+    $("#give-up").css("opacity", "1");
   }, 15000);
 }
 
