@@ -1,6 +1,6 @@
 # Confetti Captcha
 
-~~Infuritate~~ delight your users with this confetti caption. (You have to clean up afterwards, though.)
+~~Infuritate~~ delight your users with this confetti captcha. (You have to clean up afterwards, though.)
 
 ## Demo
 
