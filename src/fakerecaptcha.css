@@ -195,6 +195,10 @@
   background-color: #5fc9f5;
 }
 
+#give-up {
+  display: none;
+}
+
 /* Grey Hex: #424242
 Orange Hex: #f79420
 Font: Lato */

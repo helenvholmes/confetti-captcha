@@ -7,15 +7,15 @@ function verifyCaptcha() {
 $(".dropzone").droppable({
   drop: function (event, ui) {
     // success
-    $(this).css("background", "tomato");
+    $(ui.draggable.context).toggle();
+    $(this).css("background", "white");
   },
   over: function (event, ui) {
     // partial
-    $(this).css("background", "orange");
+    $(this).css("background", "lightgrey");
   },
   out: function (event, ui) {
     // failure
-    $(this).css("background", "cyan");
   },
 });
 
@@ -75,17 +75,12 @@ let verifyBtn = document.getElementById("fkrc-verifywin-verify-button");
 
 function addCaptchaListeners() {
   if (checkboxBtn && verifyBtn) {
-    // document.addEventListener("click", function (event) {
-    //   if (!event.path.includes(verifyWindow) && isVerifyWindowVisible()) {
-    //     closeVerifyWindow();
-    //   }
-    // });
-
     verifyBtn.addEventListener("click", function (event) {
       event.preventDefault();
       verifyBtn.disabled = true;
       verifyCaptcha();
     });
+
     checkboxBtn.addEventListener("click", function (event) {
       event.preventDefault();
       checkboxBtn.disabled = true;
@@ -104,6 +99,10 @@ function runClickedCheckboxEffects() {
   setTimeout(function () {
     showVerifyWindow();
   }, 900);
+
+  setTimeout(function () {
+    $("#give-up").show();
+  }, 15000);
 }
 
 function showCaptchaCheckbox() {
