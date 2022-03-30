@@ -1,16 +1,10 @@
 // Function triggered when client clicks [Verify]
-function verifyCaptcha(trial) {
-  let currentTrial = "#trial" + trial;
-  let nextTrial = "#trial" + (trial + 1);
-
-  $(currentTrial).toggle();
-  $(nextTrial).toggle();
-
-  //   alert("Verified!");
-  //   closeVerifyWindow();
+function verifyCaptcha() {
+  alert("Verified!");
+  closeVerifyWindow();
 }
 
-$(".confetti").draggable();
+// $(".confetti").draggable();
 $(".dropzone").droppable({
   drop: function (event, ui) {
     // success
@@ -26,6 +20,49 @@ $(".dropzone").droppable({
   },
 });
 
+for (var i = 0; i < 250; i++) {
+  create(i);
+}
+
+function create(i) {
+  var width = Math.random() * 8;
+  var height = width * 0.4;
+  var colourIdx = Math.ceil(Math.random() * 3);
+  var colour = "red";
+  switch (colourIdx) {
+    case 1:
+      colour = "yellow";
+      break;
+    case 2:
+      colour = "blue";
+      break;
+    default:
+      colour = "red";
+  }
+  $('<div class="confetti-' + i + " " + colour + '"></div>')
+    .css({
+      width: width + "px",
+      height: height + "px",
+      top: -Math.random() * 50 + "%",
+      left: Math.random() * 80 + "%",
+      opacity: Math.random() + 0.5,
+      transform: "rotate(" + Math.random() * 360 + "deg)",
+    })
+    .appendTo(".wrapper");
+
+  drop(i);
+}
+
+function drop(x) {
+  $(".confetti-" + x).animate(
+    {
+      top: "100%",
+      left: "+=" + Math.random() * 15 + "%",
+    },
+    Math.random() * 3000 + 3000
+  );
+}
+
 let checkboxWindow = document.getElementById("fkrc-checkbox-window");
 let checkboxBtn = document.getElementById("fkrc-checkbox");
 let checkboxBtnSpinner = document.getElementById("fkrc-spinner");
@@ -40,12 +77,11 @@ function addCaptchaListeners() {
     //     closeVerifyWindow();
     //   }
     // });
+
     verifyBtn.addEventListener("click", function (event) {
       event.preventDefault();
       verifyBtn.disabled = true;
-      let currentTrial = $(".trial").attr("id");
-      currentTrial = currentTrial.replace("trial", "");
-      verifyCaptcha(currentTrial);
+      verifyCaptcha();
     });
     checkboxBtn.addEventListener("click", function (event) {
       event.preventDefault();
@@ -61,6 +97,7 @@ function runClickedCheckboxEffects() {
   setTimeout(function () {
     showCaptchaLoading();
   }, 500);
+
   setTimeout(function () {
     showVerifyWindow();
   }, 900);

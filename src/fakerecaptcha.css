@@ -190,3 +190,25 @@
 .dropzone img {
   width: 100%;
 }
+
+.wrapper {
+  position: relative;
+  min-height: 200px;
+  width: 300px;
+}
+
+[class|="confetti"] {
+  position: absolute;
+}
+
+.red {
+  background-color: #e94a3f;
+}
+
+.yellow {
+  background-color: #faa040;
+}
+
+.blue {
+  background-color: #5fc9f5;
+}
