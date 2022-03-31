@@ -13,9 +13,9 @@ https://scooooooooby.github.io/confetti-captcha/
 3. Put `<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>`
    and `<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>` right before the `</body>` closing tag
 4. Put `<script src="src/fakerecaptcha.js"></script>` after the jQuery `script` tags
-5. At the location where you'd like the fake captcha to be, put the HTML code from [index.html](https://github.com/scooooooooby/kasada/index.html)
-6. Update L63 in `index.html` to have the blog post link
-7. Update L4 in `fakerecaptcha.js` to have the blog post link
+5. At the location where you'd like the fake captcha to be, put the HTML code from [index.html](https://github.com/scooooooooby/confetti-captcha/blob/kasada/index.html)
+6. Update [L63](https://github.com/scooooooooby/confetti-captcha/blob/kasada/index.html#L63) in `index.html` to have the blog post link
+7. Update [L4](https://github.com/scooooooooby/confetti-captcha/blob/kasada/src/fakerecaptcha.js#L4) in `fakerecaptcha.js` to have the blog post link
 
 ## Colophon
 
