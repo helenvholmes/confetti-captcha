@@ -1,7 +1,7 @@
 // Function triggered when client clicks [Verify]
 function verifyCaptcha() {
-  alert("Looks like you're a robot!");
-  closeVerifyWindow();
+  // UPDATE THE LINK HERE
+  window.location.href = "#";
 }
 
 $(".dropzone").droppable({
