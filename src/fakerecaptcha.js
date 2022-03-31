@@ -24,7 +24,7 @@ for (var i = 0; i < 250; i++) {
 }
 
 function create(i) {
-  var width = Math.random() * 8;
+  var width = Math.random() * 20;
   var height = width * 0.4;
   var colourIdx = Math.ceil(Math.random() * 3);
   var colour = "red";
@@ -59,7 +59,7 @@ $(".yellow").draggable({ cursor: "grabbing" });
 function drop(x) {
   $(".confetti-" + x).animate(
     {
-      top: "100%",
+      top: "+=" + Math.random() * 200 + "%",
       left: "+=" + Math.random() * 15 + "%",
     },
     Math.random() * 3000 + 3000
